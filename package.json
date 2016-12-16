@@ -9,6 +9,7 @@
     "buildAdmin": "node build/admin/build.js"
   },
   "dependencies": {
+    "axios": "^0.15.3",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
     "vue": "^2.1.0",

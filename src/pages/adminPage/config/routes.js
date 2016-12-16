@@ -12,23 +12,23 @@ export default [
                 component: resolve => require(['../pages/login/'], resolve)
             },*/
             {
-                path: '/action', //关于
+                path: '/action', //编辑页
                 meta: { auth: false },
                 component: resolve => require(['../singlePages/action/'], resolve)
             },
             {
-                path: '/index', //查看用户信息
+                path: '/index', //默认页
                 meta: { auth: false },
                 component: resolve => require(['../singlePages/index/'], resolve)
             },
             {
-                path: '/info/', //我的个人中心
+                path: '/info/', //信息页
                 meta: { auth: false },
                 component: resolve => require(['../singlePages/info/'], resolve)
             },
             {
                 meta: { auth: false },
-                path: '/list/', //我的消息
+                path: '/list/', //列表页
                 component: resolve => require(['../singlePages/list/'], resolve)
             },
             {

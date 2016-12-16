@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div>this is template body</div>
+        <div>这是主页</div>
     </div>
 </template>
 <style>
@@ -9,7 +9,6 @@
     export default{
         data(){
             return{
-                msg:'hello vue'
             }
         },
         components:{

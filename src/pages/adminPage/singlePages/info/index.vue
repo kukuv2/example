@@ -1,8 +1,6 @@
 <template>
     <div>
-        <header-component/>
-        <div>this is template body</div>
-        <other-component/>
+        <div>信息页</div>
     </div>
 </template>
 <style>

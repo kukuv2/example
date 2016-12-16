@@ -1,5 +1,9 @@
-<style lang="less" scoped>
-
+<style lang="less">
+    body{
+        border: 0;
+        margin: 0;
+        padding: 0;
+    }
 </style>
 <template>
     <div>
