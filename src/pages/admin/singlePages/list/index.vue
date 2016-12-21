@@ -20,7 +20,12 @@
         </el-table>
     </div>
 </template>
-<style>
+<style lang="less"
+       rel="stylesheet/less"
+       scoped>
+    body{
+        background: red;
+    }
 </style>
 <script>
     export default{

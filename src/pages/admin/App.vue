@@ -7,11 +7,12 @@
 </style>
 <template>
     <div>
-        <v-header></v-header>
+        <admin-header></admin-header>
         <router-view></router-view>
     </div>
 </template>
 <script>
+    import adminHeader from 'bComponents/admin/header'
     export default {
         data() {
             return {}
@@ -21,8 +22,12 @@
         },
         methods: {
             appShow() {
+                console.log('loaded');
                 document.querySelector('.app-loading').className += ' app-loading-hide'
             }
+        },
+        components:{
+            adminHeader
         }
     }
 </script>

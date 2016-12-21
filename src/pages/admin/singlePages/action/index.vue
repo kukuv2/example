@@ -80,21 +80,24 @@
     import axios from 'axios'
     export default{
         data() {
+            var defaultFormData =  {
+                name: '',
+                region: '',
+                date1: '',
+                date2: '',
+                delivery: false,
+                type: [],
+                resource: '',
+                desc: ''
+            };
             return {
-                form: {
-                    name: '',
-                    region: '',
-                    date1: '',
-                    date2: '',
-                    delivery: false,
-                    type: [],
-                    resource: '',
-                    desc: ''
-                }
+                form:defaultFormData,
+                defaultFormData
             }
         },
         methods: {
             onSubmit() {
+                debugger
                 alert('submit!');
             },
             onCancel(){
@@ -102,21 +105,29 @@
             }
         },
         watch: {
-            $route({query}) {
-                if (query.action === 'edit') {
-                    debugger
-                    axios.get('/form', {
-                                params: {
-                                    id: query.id
-                                }
-                            })
-                            .then(function (response) {
-                                console.log(response);
-                            })
-                            .catch(function (error) {
-                                console.log(error);
-                            });
-                }
+            $route: {
+                handler: function ({query}) {
+                    if (query.action === 'edit') {
+                        axios.get('/api/form',
+                                  {
+                                      params: {
+                                          id: query.id
+                                      }
+                                  }
+                        )
+                             .then((response) => {
+                                       this.form = response.data
+                                   }
+                             )
+                             .catch(function (error) {
+                                        console.log(error);
+                                    }
+                             );
+                    }else{
+                        this.form = this.defaultFormData
+                    }
+                },
+                immediate: true
             }
         },
         components: {}

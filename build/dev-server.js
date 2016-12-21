@@ -1,5 +1,5 @@
 require('./check-versions')()
-var config = require('../../config/index')
+var config = require('../config/index')
 if (!process.env.NODE_ENV) process.env.NODE_ENV = JSON.parse(config.dev.env.NODE_ENV)
 var path = require('path')
 var express = require('express')
@@ -40,7 +40,11 @@ Object.keys(proxyTable).forEach(function (context) {
   if (typeof options === 'string') {
     options = { target: options }
   }
-  app.use(proxyMiddleware(context, options))
+  if(typeof options === 'function'){
+      app.use(context, options)
+  }else{
+      app.use(proxyMiddleware(context, options))
+  }
 })
 
 // handle fallback for HTML5 history API
