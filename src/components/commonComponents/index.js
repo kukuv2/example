@@ -1,2 +1,3 @@
 import header from './header'
-export default {header}
+import footer from './footer'
+export default {header,footer}

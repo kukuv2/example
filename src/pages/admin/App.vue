@@ -1,5 +1,5 @@
 <style lang="less">
-    body{
+    body {
         border: 0;
         margin: 0;
         padding: 0;
@@ -8,7 +8,9 @@
 <template>
     <div>
         <admin-header></admin-header>
-        <router-view></router-view>
+        <keep-alive>
+            <router-view></router-view>
+        </keep-alive>
     </div>
 </template>
 <script>
@@ -26,7 +28,7 @@
                 document.querySelector('.app-loading').className += ' app-loading-hide'
             }
         },
-        components:{
+        components: {
             adminHeader
         }
     }

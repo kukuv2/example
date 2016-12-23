@@ -1,0 +1,52 @@
+
+.dateSlider {
+	width: 300px;
+	height: 40px;
+}
+.ui-ruler-tick {
+	width: 0;
+	border-left: 1px solid #C1C8DF;
+	height: 12px;
+	position: relative;
+	top: -12px;
+	opacity: 0;
+}
+.ui-rangeSlider .ui-rangeSlider-innerBar {
+	margin: 0px;
+	padding: 0px;
+	border-radius: 2px;
+	width: 300px;
+	height: 20px;
+	background: transparent url('/assets/images/movebg.png') no-repeat;
+}
+
+.ui-rangeSlider .ui-rangeSlider-bar {
+	height: 28px;
+	margin: 0px;
+	padding: 0px;
+	background: transparent url('/assets/images/dateSilderMove.png') repeat-x;
+	cursor:pointer;
+	margin-top: -8px;
+	width: 300px;
+}
+.ui-rangeSlider .ui-rangeSlider-handle {
+	width: 18px;
+	height: 20px;
+	background:url('/assets/images/dateSilderArr1.png') no-repeat;
+	margin-top: 2px;
+	cursor: pointer;
+}
+.ui-rangeSlider .ui-rangeSlider-leftHandle {
+	background:url('/assets/images/dateSilderArr1.png') -3px 0 no-repeat;
+}
+.ui-rangeSlider-label-value {
+	position: relative;
+	top: 12px;
+}
+.ui-rangeSlider-label {
+	bottom: 15px;
+	margin: 0px 0px 2px;
+	height: 12px;
+	cursor: pointer;
+	bottom: -22px;
+}

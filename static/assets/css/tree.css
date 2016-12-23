@@ -1,0 +1,116 @@
+.tree-head {
+  position: relative;
+  margin-top: 5px;
+}
+.tree-body .tree-ul {
+  display: none;
+  cursor: pointer;
+  background: #fff;
+}
+.tree-body>.tree-ul {
+  display: block;
+  height: 248px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-bottom: 30px;
+}
+.tree-ul li { 
+  width: 100%;
+  min-height: 21px;
+  position: relative;
+  background: url('/assets/images/common/treestyle.png') left -3px no-repeat;
+}
+.tree-ul li>.tree-ul li:last-child {
+  background: url('/assets/images/common/treebottom.png') left 0px no-repeat;
+}
+.tree-body>.tree-ul>li {
+  background-image: none;
+}
+.tree-ul .active>p>i {
+  background: #8dbdf6;
+}
+.tree-ul .active>p>i:hover {
+  color: #fff;
+}
+.tree-ul i:hover {
+  color: #8dbdf6;
+}
+.tree-body {
+  display: none;
+  width: 200px;
+  height: 250px;
+  background: #fff;
+  /*overflow-x: hidden;*/
+  border: 1px solid #959595;
+  z-index: 2;
+}
+.tree-btn-OK {
+  position: absolute;
+  width: 198px;
+  height: 30px;
+  bottom: 1px;
+  line-height: 30px;
+  background: #d3f4fb;
+  text-align: center;
+  cursor: pointer;
+  z-index: 3;
+}
+.tree-ul .tree-ul li {
+  margin-left: 30px;
+  padding-left: 4px;
+}
+.tree-ul li .tree-ul li {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.tree-ul li .tree-ul li .tree-ul li {
+  margin-left: 20px;
+}
+.tree-ul li span { 
+  width: 14px;
+  height: 14px;
+  border: 1px solid  #9b9b9b;
+  color: #b2b2b2;
+  line-height: 10px;
+  text-align: center;
+  position: absolute; 
+  right: 10px;
+  top: 6px;
+}
+.tree-ul li>.tree-ul li span {
+  right: 20px;
+}
+.tree-ul p {
+  line-height: 28px;
+}
+.tree-ul p i {
+  display: block;
+  padding-left: 10px;
+}
+.tree-sel-txt {
+  width: 200px;
+  height: 27px;
+  padding-left: 30px;
+  border: 1px solid #e3eaef;
+  border-radius: 4px;
+}
+.tree-head img {
+  position: absolute;
+  left: 10px;
+  top: 6px;
+}
+.tree-btn-OK:hover {
+  background: #afedfd;
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,333 @@
+.analyze {
+    top: 64px;
+    overflow: hidden;
+    width: 100%;
+}
+.al-list {
+    width: 176px;
+    height: 100%;
+    border-right: 1px solid #d0d0d0;
+}
+.al-list-ul {
+    width: 176px;
+    height: 100%;
+    background: url('/assets/images/analyze/report-left.png') no-repeat;
+    background-size: cover;
+}
+.al-list-ul li {
+    line-height: 42px;
+    height: 42px;
+    padding-left: 26px;
+    cursor: pointer;
+    color: #666;
+    border-top: 1px solid transparent;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    border-left: 1px solid transparent;
+}
+.al-content {
+    overflow: auto;
+    width: auto;
+    height: 100%;
+    margin-left: 176px;
+    background: #e3eaef;
+}
+.al-tb-content {
+    top: 30px;
+    left: 2%;
+    width: 96%;
+    height: 100%;
+    padding: 14px 16px;
+    background: #fff;
+}
+.al-filter-date {
+    position: relative;
+    width: 100%;
+    height: 54px;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+.al-filter-date input,
+.al-select .sel-city {
+    width: 179px;
+    height: 27px;
+    border: 1px solid #e3eaef;
+    border-radius: 2px;
+    background: #fff;
+}
+.al-select .sel-city {
+    left: -18px;
+}
+.al-filter-date span {
+    margin: 0 0 0 14px;
+    color: #666;
+}
+.select-tree-txt {
+    line-height: 38px;
+    margin: 0 12px 0 31px;
+    color: #666;
+}
+.al-filter-date  i {
+    position: relative;
+    left: 30px;
+}
+.dropdown-menu {
+    font-size: 13px;
+}
+.al-title {
+    width: 100%;
+    height: 34px;
+    background: #daf7ce;
+}
+.al-title-p {
+    font-size: 14px;
+    line-height: 34px;
+    padding-left: 12px;
+}
+.al-title span {
+    width: 100px;
+    height: 34px;
+    cursor: pointer;
+    text-align: center;
+}
+.al-title span {
+    background: #bae0a7;
+}
+.al-title span:hover {
+    background: #c3efac;
+}
+.al-title span i {
+    font-size: 14px;
+    display: inline-block;
+    padding-right: 4px;
+    color: #4d7439;
+}
+.al-tb {
+    width: 100%;
+}
+.al-tb-content .pagination {
+    z-index: 111;
+    top: 446px;
+    min-width: 200px;
+    height: 70px;
+    margin-left: 20px;
+    text-align: center;
+}
+.pagination li {
+    cursor: pointer;
+}
+.al-select .sel-wrap {
+    top: -8px;
+    left: 17px;
+}
+.al-filter {
+    top: 18px;
+    left: 2%;
+    width: 96%;
+    height: 110px;
+    border-bottom: 1px solid #eee;
+    border-radius: 2px;
+    background: #fff;
+}
+.al-filter input {
+    cursor: pointer;
+}
+.al-filter .al-select {
+    top: 0;
+    bottom: 0;
+    height: 54px;
+    margin: 0;
+    padding: 15px;
+    text-align: left;
+    border: none;
+    background: transparent;
+}
+.sel-city .al-select {
+    left: 14px;
+}
+.al-select img {
+    position: relative;
+    z-index: 2;
+    top: 14px;
+    left: 22px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+}
+.al-filter .tree-wrap {
+    z-index: 3;
+    top: 42px;
+    left: 91px;
+    width: 180px;
+    height: 260px;
+    text-align: left;
+    background: #fff;
+}
+.al-tb td {
+    text-align: center;
+}
+.al-tb thead td {
+    font-size: 14px;
+}
+.al-tb-tbody tr {
+    height: 33px;
+}
+.analyze .active {
+    background-color: #eee;
+}
+.pagination .next-page .unuse,
+.pagination .pre-page .unuse {
+    background-color: #ddd;
+}
+.statistics {
+    position: fixed;
+    z-index: 300;
+    right: 170px;
+    display: none;
+    width: 250px;
+    height: 200px;
+    border-radius: 5px;
+    background: #fff;
+    -webkit-box-shadow: 4px 0 3px #e5e5e5;
+    -moz-box-shadow: 4px 0 3px #e5e5e5;
+    box-shadow: 4px 0 3px #e5e5e5;
+}
+.analyze-statistics {
+    top: 10px;
+    left: 10px;
+    width: 230px;
+    height: 160px;
+}
+.al-tb i {
+    font-size: 24px !important;
+    position: relative;
+    top: 4px;
+    display: inline-block;
+    width: 32px;
+    height: 22px;
+}
+.icon-data {
+    color: #4991b9;
+}
+.icon-pj {
+    color: #e68c9e;
+}
+.icon-port {
+    color: #dea955;
+}
+.evaluat-top,
+.evaluat-bottom {
+    position: absolute;
+    top: 8px;
+    left: 70%;
+    width: 10px;
+    height: 14px;
+}
+.evaluat-top {
+    background: url('/assets/images/analyze/up-arrow.png') no-repeat;
+}
+.evaluat-level {
+    position: absolute;
+    top: 3px;
+    left: 70%;
+    width: 14px;
+    height: 14px;
+    background: url('/assets/images/analyze/level.png') right bottom  no-repeat;
+}
+.evaluat-bottom {
+    background: url('/assets/images/analyze/down-arrow.png') no-repeat;
+}
+.compare-all {
+    font-size: 16px !important;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    margin-left: -9px;
+    color: #b5b5b5;
+}
+.compare-all:hover {
+    color: #7bbd5d;
+}
+.table-title td {
+    height: 45px;
+    border-bottom: 1px solid #d2d2d2;
+}
+.al-tb-tbody tr {
+    border-bottom: 1px solid #fff;
+}
+.al-tb-tbody tr:nth-child(2n) {
+    background: #f2f2f2;
+}
+.al-tb-tbody tr:nth-child(2n+1) {
+    background: #f7f7f7;
+}
+.al-tb-tbody td {
+    position: relative;
+    width: 25%;
+    height: 30px;
+}
+.al-status-color1-true {
+    color: #d16514;
+}
+.al-status-color2-true {
+    color: #6fb011;
+}
+.al-status-color3-true {
+    color: #e0b300;
+}
+.al-status-color4-true {
+    color: #e98c04;
+}
+.al-status-color5-true {
+    color: #56b515;
+}
+.al-status-color1-false {
+    color: #efc836;
+}
+.al-status-color2-false {
+    color: #a7a502;
+}
+.al-status-color3-false {
+    color: #f96b82;
+}
+.al-status-color4-false {
+    color: #d64628;
+}
+.al-status-color5-false {
+    color: #a63722;
+}
+.chart-no-data {
+    font-size: 18px;
+    position: relative;
+    top: 55px;
+    width: 100%;
+    text-align: center;
+}
+.analyze-tree .tree-body {
+    position: absolute;
+}
+.al-wrap-tb {
+    height: 380px;
+}
+.dropdown-menu .icon-arrow-left,
+.dropdown-menu .icon-arrow-right {
+    display: block;
+}
+.icon-arrow-left:before,
+.glyphicon-arrow-left:before {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content: '⬅️';
+    vertical-align: middle;
+}
+.icon-arrow-right:before,
+.glyphicon-arrow-right:before {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content: '➡️';
+    vertical-align: middle;
+}

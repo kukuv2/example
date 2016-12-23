@@ -1,0 +1,372 @@
+/*report*/
+.spirit-svg,
+.report-single h3  input,
+.report-single h3 a:hover svg,
+.report-overflow,
+.report-single h3 em,
+.report-single h3:hover .re-bj,
+.report-single h3:hover .re-bj,
+.vertical .report-content a {
+    display: none;
+}
+.vertical .report-p {
+    display: none!important;
+}
+.report-single h3 .re-bj,
+.report-type li span em,
+.report-single h3:hover input,
+.report-single h3:hover em {
+    display: block;
+}
+
+.left-container {
+    position: relative;
+    top: 64px;
+    width: 176px;
+    border-right: 1px solid #d0d0d0;
+}
+.left-container .report-type {
+    width: 176px;
+    background: url('/assets/images/analyze/report-left.png') no-repeat;
+    background-size: cover;
+}
+.report-type li {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 42px;
+    padding-left: 26px;
+    border-top: 1px solid transparent;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    border-left: 1px solid transparent;
+}
+.report-type li:hover,
+.al-list-ul li:hover {
+    border: 1px solid #a6aba9;
+}
+.report-type li a {
+    line-height: 42px;
+    display: inline-block;
+    overflow: hidden;
+    width: 96px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #545252; }
+.report-type .on,
+.al-list-ul .on {
+    background: #42e495;
+}
+.report-type .on a,
+.al-list-ul .on {
+    font-size: 14px;
+    text-decoration: none;
+    color: #fff;
+}
+.report-type .on span i {
+    opacity: 1;
+}
+.report-type li span {
+    position: absolute;
+    top: 50%;
+    right: 2px;
+    clear: both;
+    overflow: hidden;
+    margin-top: -7px;
+}
+.report-type li span em {
+    line-height: 16px;
+    float: left;
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+}
+.report-type li .report-hot em {
+    background: #f39800;
+}
+.report-type li .report-new em {
+    background: #fd5120;
+}
+.report-type li span i {
+    float: left;
+    width: 14px;
+    height: 14px;
+    opacity: 0;
+    color: #fff;
+}
+.report-type li .report-common svg {
+    opacity: 0;
+}
+.report-type li:hover i {
+    opacity: 1;
+    color: #555;
+}
+.report-type li .repeat-txt {
+    color: #c5c5c5;
+}
+.right-container {
+    position: relative;
+    top: 64px;
+    margin-left: 176px;
+}
+.report-h3 .report-title {
+    font-size: 14px;
+}
+.style-ctl {
+    line-height: 72px;
+    position: relative;
+    width: 100%;
+    height: 44px;
+    margin: 0 auto;
+    background: #fff;
+}
+.right-svg {
+    position: absolute;
+    right: 20px;
+}
+.style-ctl span {
+    font-size: 20px;
+    margin-left: 15px;
+    cursor: pointer;
+    color: #90a2a9;
+}
+.style-ctl svg:hover {
+    color: #db9e7c;
+}
+.style-ctl .active {
+    color: #fdbe9a;
+}
+.report-h3 {
+    line-height: 32px;
+    height: 32px;
+    color: #333;
+}
+.report-list {
+    overflow-x: hidden;
+    padding: 14px;
+    margin: 0 auto;
+}
+.report-single {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 8px;
+    border-top: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    border-bottom: 2px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+    box-shadow: 0  1px 2px #e7e7e7;
+}
+.report-single:hover {
+    background: #eefbf4;
+}
+.report-single:hover svg {
+    fill: #5375ca;
+}
+.report-overflow {
+    line-height: 20px;
+    position: relative;
+    overflow: hidden;
+    zoom: 1;
+    height: 40px;
+    margin-top: 16px;
+}
+.report-p{
+    overflow: hidden;
+    height: 36px;
+    margin-right: 3px;
+}
+.report-left{
+    position: relative;
+    float: left;
+    overflow: hidden;
+    width: 120px;
+    height: 106px;
+}
+.report-left img {
+    cursor: pointer;
+}
+.report-left span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    color: #fff;
+    border-right: solid 40px transparent;
+}
+.report-left  em {
+    position: absolute;
+    top: -36px;
+    left: 6px;
+}
+.report-left .re-orange {
+    border-top: solid 40px #ffa817;
+}
+.report-left .re-red {
+    border-top: solid 40px #ff5421;
+}
+.report-single img {
+    margin-right: 8px;
+}
+.report-single h3 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.report-single h3  input {
+    height: 25px;
+    color: #7089d2;
+    background: none;
+}
+.report-single h3 a {
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+}
+.re-bj {
+    width: 28px;
+    height: 22px;
+    color: #7d7c7b;
+}
+.report-single:hover .re-bj {
+    color: #428bca;
+}
+.report-single h3 em {
+    font-size: 12px;
+    font-weight: normal;
+    width: 54px;
+    height: 20px;
+    color: #20be6f;
+}
+.report-list .vertical .report-left {
+    float: none;
+    width: 190px;
+    height: 170px;
+}
+.report-list .vertical .report-content {
+    margin-left: 0;
+}
+.report-list .vertical .report-date {
+    line-height: 38px;
+    position: static;
+    display: block;
+    height: 38px;
+    background: #f0fcf2;
+}
+.report-list .vertical {
+    width: auto;
+    width: 192px;
+    height: 208px;
+    margin: 10px;
+    padding: 0;
+}
+.report-list .vertical .report-h3 {
+    position: relative;
+    top: -38px;
+    width: 190px;
+    color: #fff;
+}
+.report-list .vertical .report-h3 span {
+    padding: 0 10px;
+}
+.report-list .vertical .report-h3 .report-date {
+    color: #676c68;
+}
+.vertical .report-title {
+    line-height: 36px;
+    display: inherit;
+    overflow: hidden;
+    width: 190px;
+    height: 36px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #fff;
+    background: rgba(0,0,0,.4);
+}
+.vertical .report-down {
+    margin-top: -20px;
+}
+.report-content {
+    position: relative;
+    margin-left: 130px;
+}
+.report-content a {
+    display: block;
+    width: 65px;
+    margin-top: 20px;
+    color: #428bca;
+}
+.report-date {
+    position: absolute;
+    right: 10px;
+}
+.report-list .vertical:hover img {
+    transition: all .5s ease-in-out;
+    -webkit-transform: scale(1.4);
+    -moz-transform: scale(1.4);
+    -o-transform: scale(1.4);
+    transform: scale(1.4);
+}
+.report-list .vertical:hover .report-h3 span {
+    font-size: 16px;
+    transition: all .4s ease-in-out;
+}
+.report footer {
+    left: 176px;
+    width: 92%;
+    color: #919191;
+    background: #fff;
+}
+.report-bgcolor {
+    background: #fff;
+}
+.reports .footer {
+    position: relative;
+    left: -60px;
+}
+.horizontal-btn {
+    position: relative;
+    top: -2px;
+}
+@media screen and ( min-width: 1440px) {
+    .report-list,
+    .style-ctl {
+        width: 1088px;
+    }
+    .report-list {
+        -webkit-box-shadow: 1px 4px 13px #d0d0d0;
+        -moz-box-shadow: 1px 4px 13px #d0d0d0;
+        box-shadow: 1px 4px 13px #d0d0d0;
+    }
+    .reports {
+        background: #dfdddd;
+    }
+}
+@media screen and ( max-width: 1256px) {
+    .report-list,
+    .style-ctl {
+        width: 878px;
+    }
+}
+@media screen and ( max-width: 1062px) {
+    .report-list,
+    .style-ctl {
+        width: 666px;
+    }
+}
+@media screen and ( max-width: 842px) {
+    .report-list {
+        overflow-x: scroll;
+    }
+}
+@media screen and ( max-width: 840px) {
+    .report-list,
+    .style-ctl {
+        width: 615px;
+    }
+}

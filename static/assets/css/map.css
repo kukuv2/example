@@ -1,0 +1,131 @@
+
+/**
+ * @Author DPD
+ * @Date 2016/6/16
+ * The styles of map
+ */
+#bodyer, #map {
+  width: 100%;
+  height: 100%;
+}
+.ol-logo-only {
+  display: none;
+}
+.ol-scale-line {
+  position: fixed;
+}
+.ol-overlaycontainer-stopevent {
+	position: fixed;
+	right: 0;
+	z-index: 2;
+}
+.ol-zoom {
+	width: 30px;
+	height: 60px;
+	position: fixed;
+	right: 20px;
+	top: 190px;
+	box-shadow: -2px 0px 3px 1px #cad1d3,
+	0px -2px 2px 1px #cad1d3,
+	2px 0px 2px 1px #cad1d3,
+	0px 2px 2px 1px #cad1d3;
+	-webkit-box-shadow: -2px 0px 2px 1px #cad1d3,
+	0px -2px 2px 1px #cad1d3,
+	2px 0px 2px 1px #cad1d3,
+	0px 2px 2px 1px #cad1d3;
+	-o-box-shadow: -2px 0px 2px 1px #cad1d3,
+	0px -2px 2px 1px #cad1d3,
+	2px 0px 2px 1px #cad1d3,
+	0px 2px 2px 1px #cad1d3;
+	-ms-box-shadow: -2px 0px 2px 1px #cad1d3,
+	0px -2px 2px 1px #cad1d3,
+	2px 0px 2px 1px #cad1d3,
+	0px 2px 2px 1px #cad1d3;
+	-moz-box-shadow: -2px 0px 2px 1px #cad1d3,
+	0px -2px 2px 1px #cad1d3,
+	2px 0px 2px 1px #cad1d3,
+	0px 2px 2px 1px #cad1d3;
+}
+.ol-control {
+	background: none;
+	border-radius: 0;
+	padding: 0;
+}
+.ol-control:hover {
+	background: #fff;
+}
+.ol-zoom .ol-zoom-in {
+	border-radius: 0;
+	border-bottom: 1px solid #eff0f2;
+}
+.ol-zoom .ol-zoom-out {
+	border-radius: 0;
+}
+.ol-control button {
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	background: #fff;
+	color: #745b55;
+	margin: 0;
+}
+.ol-control button:hover {
+	background: #31c37c;
+	padding: 0;
+	color: #fff;
+}
+.ol-mouse-position {
+	position: fixed;
+	bottom: 150px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+.ol-scale-line {
+	background: none;
+	position: fixed;
+	bottom: 180px;
+	right: 20px;
+}
+.ol-scale-line-inner {
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	color: #000;
+}
+.ol-control button:focus, .ol-control button:hover {
+	background: #31c37c;
+	border-radius: none;
+}
+#map-tooltip {
+	display: none;
+	position: fixed;
+	width: 180px;
+	height: 48px;
+	background: #fff;
+  border-radius: 25px;
+}
+#map-tooltip h3 {
+	font-size: 12px;
+  font-weight: 400;
+  color: #333;
+}
+#map-tooltip p {
+	font-size: 10px;
+  font-weight: 400;
+  color: #666;
+}
+#tooltip-img {
+  width: 38px;
+  height: 38px;
+  float: left;
+  background: #f6b45a;
+  border-radius: 19px;
+  padding: 5px;
+  margin: 4px 10px;
+}
+.tooltip-content {
+	position: relative;
+	top: 10px;
+}

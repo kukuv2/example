@@ -10,10 +10,7 @@
                     <li class="login-person iconfont icon-yonghuming header-username">用户名</li>
                     <li>
                         <span>|</span>
-                        <a href="#/login"
-                           class="click-login header-login-href">
-                            登录
-                        </a>
+                        <router-link class="click-login header-login-href" to="/login">登录</router-link>
                     </li>
                 </ul>
             </div>
@@ -23,10 +20,10 @@
             <div class="header-navbar-left">
                 <a class="navbar-logo no-select"
                    href="#/">
-                    <img src="assets/images/common/logo.png">
+                    <img src="/static/assets/images/common/logo.png">
                 </a>
             </div>
-            <span class=" header-navbar-icon">
+    <span class=" header-navbar-icon">
       <svg class="icon"
            style=""
            viewBox="0 0 1024 1024"
@@ -38,13 +35,13 @@
                                           p-id="5156"></path></svg>
     </span>
             <div id="example-navbar-collapse"
-                 class="header-navbar-right hide">
+                 class="header-navbar-right">
                 <ul class="order">
-                    <li class="go-homepage active">
-                        <a href="#/">首页</a>
+                    <li class="go-homepage" :class="getPageActive('index')">
+                        <router-link to="/index">首页</router-link>
                     </li>
-                    <li class="go-viewtarget">
-                        <a href="#/monitor">遥感监测</a>
+                    <li class="go-viewtarget" :class="getPageActive('monitor')">
+                        <router-link to="/monitor">遥感监测</router-link>
                     </li>
                     <li class="go-classification">
                         <a href="#/classification">作物分布</a>
@@ -487,11 +484,24 @@
 <script>
     export default{
         data(){
-            return {}
+            return {
+                pageActive:{
+                    active:true
+                }
+            }
         },
         methods: {
             handleSelect: function (key) {
                 this.$router.push(key);
+            },
+            getPageActive:function (path) {
+                var showActive = false;
+                if (this.$route.path.indexOf(path) > -1) {
+                    showActive = true
+                }
+                return {
+                    active:showActive
+                }
             }
         },
         components: {}
