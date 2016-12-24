@@ -1,4 +1,5 @@
 var path = require('path')
+var fs = require('fs')
 var config = require('../config/index')
 var utils = require('./utils')
 var webpack = require('webpack')
@@ -7,6 +8,9 @@ var baseWebpackConfig = require('./webpack.base.conf.js')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var env = config.build.env
+var pagesPath = path.join('./', '/src/pages')
+var componentsPath = path.join('./', 'src/components')
+var commonComponentsPath = path.join(componentsPath, '/commonComponents/index.js')
 var entries = fs.readdirSync(pagesPath).reduce((entries, dir) => {
         const fullDir = path.join(pagesPath, dir)
         const entry = path.join(fullDir, 'main.js')
@@ -49,12 +53,12 @@ var webpackConfig = merge(baseWebpackConfig, {
                     'process.env': env
                 }
             ),
-            new webpack.optimize.UglifyJsPlugin({
+            /*new webpack.optimize.UglifyJsPlugin({
                     compress: {
                         warnings: false
                     }
                 }
-            ),
+            ),*/
             new webpack.optimize.DedupePlugin(),
             new webpack.optimize.OccurrenceOrderPlugin(),
             // extract css into its own file
@@ -62,36 +66,6 @@ var webpackConfig = merge(baseWebpackConfig, {
             // generate dist index.html with correct asset hash for caching.
             // you can customize output by editing /index.html
             // see https://github.com/ampedandwired/html-webpack-plugin
-            new HtmlWebpackPlugin({
-                    filename: config.build.index,
-                    template: './src/templates/admin/index.html',
-                    inject: true,
-                    minify: {
-                        removeComments: true,
-                        collapseWhitespace: true,
-                        removeAttributeQuotes: true
-                        // more options:
-                        // https://github.com/kangax/html-minifier#options-quick-reference
-                    },
-                    // necessary to consistently work with multiple chunks via CommonsChunkPlugin
-                    chunksSortMode: 'dependency'
-                }
-            ),
-            new HtmlWebpackPlugin({
-                    filename: config.build.index,
-                    template: './src/templates/index.html',
-                    inject: true,
-                    minify: {
-                        removeComments: true,
-                        collapseWhitespace: true,
-                        removeAttributeQuotes: true
-                        // more options:
-                        // https://github.com/kangax/html-minifier#options-quick-reference
-                    },
-                    // necessary to consistently work with multiple chunks via CommonsChunkPlugin
-                    chunksSortMode: 'dependency'
-                }
-            ),
             // split vendor js into its own file
             new webpack.optimize.CommonsChunkPlugin({
                     name: 'vendor',
@@ -112,6 +86,38 @@ var webpackConfig = merge(baseWebpackConfig, {
             new webpack.optimize.CommonsChunkPlugin({
                     name: 'manifest',
                     chunks: ['vendor']
+                }
+            ),
+            new HtmlWebpackPlugin({
+                    filename: path.resolve(__dirname, '../dist/admin.html'),
+                    template: './src/pages/admin/index.html',
+                    inject: true,
+                    minify: {
+                        removeComments: true,
+                        collapseWhitespace: true,
+                        removeAttributeQuotes: true
+                        // more options:
+                        // https://github.com/kangax/html-minifier#options-quick-reference
+                    },
+                    // necessary to consistently work with multiple chunks via CommonsChunkPlugin
+                    chunksSortMode: 'dependency',
+                    chunks:['admin','manifest','commonComponents']
+                }
+            ),
+            new HtmlWebpackPlugin({
+                    filename: path.resolve(__dirname, '../dist/front.html'),
+                    template: './src/pages/front/index.html',
+                    inject: true,
+                    minify: {
+                        removeComments: true,
+                        collapseWhitespace: true,
+                        removeAttributeQuotes: true
+                        // more options:
+                        // https://github.com/kangax/html-minifier#options-quick-reference
+                    },
+                    // necessary to consistently work with multiple chunks via CommonsChunkPlugin
+                    chunksSortMode: 'dependency',
+                    chunks:['front','manifest','commonComponents']
                 }
             ),
         ]

@@ -2,25 +2,25 @@ $(document).ready(function() {
     // common
     Global.commonOnDocumentReady();
     // routectl
-    Global.routectlOnReady();
+    // Global.routectlOnReady();
     // request
     Global.requestOnReady();
     // login
     Global.loginOnReady();
 
     // query user's login status & load header static page & redner header
-    initHeader();
+    // initHeader();
 });
 
 // init header 
 // @Refactor : should be in file : views/header.js
 var initHeader = function() {
     $.when(
-        userLoginStateRequest(), headerPageRequest()
+        userLoginStateRequest()/*, headerPageRequest()*/
 
     ).done(function(userLoginStateResponse, headerPageResponse) {
         var userLoginState = userLoginStateResponse[0];
-        var htmlText = headerPageResponse[0];
+        // var htmlText = headerPageResponse[0];
 
         // CAUTION: data format checking for interface<user/isLogin> is implicit here,
         // error occured when 'is_login' cannot be found is regard 
@@ -28,7 +28,8 @@ var initHeader = function() {
         var isLogin = userLoginState.is_login ? true : false;
         var userName = userLoginState.username;
 
-        renderHeader(htmlText, isLogin, userName);
+        // renderHeader(htmlText, isLogin, userName);
+        renderHeader(isLogin, userName);
         initHeaderEvtAndStyle();
 
     }).fail(function() {
@@ -57,9 +58,8 @@ var headerPageRequest = function() {
 
 // after header page's html text and user's login information is successly responsed, render it
 // @Refactor : should be in file view/header.js
-var renderHeader = function(headerPage, isLogin, userName) {
-    $(".index-header").replaceWith(headerPage);
-
+var renderHeader = function(isLogin, userName) {
+    // $(".index-header").replaceWith(headerPage);
     if (isLogin) {
         $(".header-username").text(userName);
         $(".header-login-href")

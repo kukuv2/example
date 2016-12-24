@@ -13,5 +13,14 @@ module.exports = {
                 "desc": "dsddsds"
             }
         )
+    },
+    '/front/user/isLogin': function (req, res) {
+        res.send([
+                {
+                    is_login: true,
+                    username: 'kukuv'
+                }
+            ]
+        )
     }
 }

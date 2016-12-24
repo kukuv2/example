@@ -26,8 +26,10 @@ var CONF = {
 }
 
 // configrations
-CONF.baseUrl = 'http://192.168.1.88:8002/';
-CONF.serverBaseUrl = 'http://192.168.1.88:8002/';
+/*CONF.baseUrl = 'http://192.168.1.88:8002/';
+CONF.serverBaseUrl = 'http://192.168.1.88:8002/';*/
+CONF.baseUrl = 'http://localhost:8083/front/';
+CONF.serverBaseUrl = 'http://localhost:8083/front/';
 CONF.apiUrl = 'http://api.agrisz.org/';
 CONF.mapUrl = 'http://map.agrisz.com/geoserver/map/wms';
 

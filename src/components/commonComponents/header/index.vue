@@ -7,10 +7,13 @@
             </p>
             <div class="fr">
                 <ul class="navbar-right logout clear">
-                    <li class="login-person iconfont icon-yonghuming header-username">用户名</li>
+                    <li class="login-person iconfont icon-yonghuming header-username">{{userName?userName:'用户名'}}</li>
                     <li>
                         <span>|</span>
-                        <router-link class="click-login header-login-href" to="/login">登录</router-link>
+                        <a class="click-login header-login-href" @click="handleSelect"
+                                     :to="login ? '/logout' : '/login'">
+                            {{login ? '登出' : '登录'}}
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -23,7 +26,7 @@
                     <img src="/static/assets/images/common/logo.png">
                 </a>
             </div>
-    <span class=" header-navbar-icon">
+            <span class=" header-navbar-icon">
       <svg class="icon"
            style=""
            viewBox="0 0 1024 1024"
@@ -37,10 +40,12 @@
             <div id="example-navbar-collapse"
                  class="header-navbar-right">
                 <ul class="order">
-                    <li class="go-homepage" :class="getPageActive('index')">
+                    <li class="go-homepage"
+                        :class="getPageActive('index')">
                         <router-link to="/index">首页</router-link>
                     </li>
-                    <li class="go-viewtarget" :class="getPageActive('monitor')">
+                    <li class="go-viewtarget"
+                        :class="getPageActive('monitor')">
                         <router-link to="/monitor">遥感监测</router-link>
                     </li>
                     <li class="go-classification">
@@ -482,25 +487,45 @@
     }
 </style>
 <script>
+    import {mapState} from 'vuex'
     export default{
         data(){
             return {
-                pageActive:{
-                    active:true
+                pageActive: {
+                    active: true
                 }
             }
         },
+        computed: {
+            ...mapState({
+                userName: function (state) {
+                    return state.user.userName
+                },
+                login: function (state) {
+                    var login = state.user.login
+                    if(login){
+                        this.$router.push('/index');
+                    }
+                    return login
+                }
+            })
+        },
         methods: {
-            handleSelect: function (key) {
-                this.$router.push(key);
+            handleSelect: function () {
+                debugger
+                if(this.login){
+//                    return this.$router.push('/logout')
+                    return this.$store.commit('logout')
+                }
+                this.$router.push('/login')
             },
-            getPageActive:function (path) {
+            getPageActive: function (path) {
                 var showActive = false;
                 if (this.$route.path.indexOf(path) > -1) {
                     showActive = true
                 }
                 return {
-                    active:showActive
+                    active: showActive
                 }
             }
         },

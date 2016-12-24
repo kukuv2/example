@@ -21,6 +21,7 @@
         },
         mounted() {
             this.appShow()
+            this.$store.dispatch('getUserInfo')
         },
         methods: {
             appShow() {
