@@ -3,15 +3,35 @@
         <div>这是主页</div>
     </div>
 </template>
-<style>
-</style>
+<style></style>
 <script>
+    import axios from 'axios'
     export default{
         data(){
-            return{
+            return {
+                layout: 'list',
+                article: [
+                    {
+                        title: 'aa'
+                    }, {
+                        title: 'bb'
+                    }
+                ]
             }
         },
-        components:{
-        }
+        mounted(){
+            axios.get('/home/navigate')
+                 .then((response) => {
+                             console.log(response.data)
+                             debugger;
+                         }
+                 )
+                 .catch(function (error) {
+                             debugger;
+                             console.log(error);
+                         }
+                 );
+        },
+        components: {}
     }
 </script>
