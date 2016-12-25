@@ -101,7 +101,7 @@ var webpackConfig = merge(baseWebpackConfig, {
                     },
                     // necessary to consistently work with multiple chunks via CommonsChunkPlugin
                     chunksSortMode: 'dependency',
-                    chunks:['admin','manifest','commonComponents']
+                    chunks:['manifest','vendor','commonComponents','admin']
                 }
             ),
             new HtmlWebpackPlugin({
@@ -117,7 +117,7 @@ var webpackConfig = merge(baseWebpackConfig, {
                     },
                     // necessary to consistently work with multiple chunks via CommonsChunkPlugin
                     chunksSortMode: 'dependency',
-                    chunks:['front','manifest','commonComponents']
+                    chunks:['manifest','vendor','commonComponents','front']
                 }
             ),
         ]
