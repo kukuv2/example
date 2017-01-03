@@ -1,7 +1,7 @@
 <template>
     <div class="formWrap">
-        <aa></aa>
-        <div ref="content" v-map=""></div>
+        <div ref="content"
+             v-map=""></div>
     </div>
 </template>
 <style lang="less"
@@ -9,22 +9,21 @@
        scoped>
     .formWrap {
         margin-top: 30px;
-        width: 500px;
+        width: 100%;
+        height: 800px;
     }
 </style>
 <script>
     import axios from 'axios'
-    import aa from 'bComponents/admin/aaa'
     export default{
         data() {
-            return {
-            }
+            return {}
         },
-        directives:{
-            map:{
+        directives: {
+            map: {
                 bind(el){
                     var result = {};
-                    var defineUrl = function(layerType) {
+                    var defineUrl = function (layerType) {
                         var urlArr = [];
                         for (var i = 0; i < 8; i++) {
                             var url = "http://t" + i + ".tianditu.com/DataServer?T=" + layerType + "_w&x={x}&y={y}&l={z}";
@@ -41,7 +40,7 @@
                     });
 
                     result.tdtImgLayer = new ol.layer.Tile({
-                        visible:false,
+                        visible: false,
                         title: "影像数据",
                         source: new ol.source.XYZ({
                             urls: defineUrl("img")
@@ -102,8 +101,6 @@
                 immediate: true
             }
         },
-        components: {
-            aa
-        }
+        components: {}
     }
 </script>

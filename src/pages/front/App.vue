@@ -1,5 +1,5 @@
 <style lang="less">
-    body{
+    body {
         border: 0;
         margin: 0;
         padding: 0;
@@ -16,7 +16,7 @@
     export default {
         data() {
             return {
-                showFooter:false
+                showFooter: false
             }
         },
         mounted() {
@@ -29,19 +29,18 @@
                 document.querySelector('.app-loading').className += ' app-loading-hide'
             }
         },
-        watch:{
+        watch: {
             $route: {
-                handler: function ({query,path}) {
+                handler: function ({query, path}) {
                     if (path.indexOf('monitor') > -1) {
                         this.showFooter = true
-                    }else{
+                    } else {
                         this.showFooter = false
                     }
                 },
                 immediate: true
             }
         },
-        components:{
-        }
+        components: {}
     }
 </script>
